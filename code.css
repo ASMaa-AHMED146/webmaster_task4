@@ -1,0 +1,83 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgba(137, 43, 226, 0.245);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    flex-direction: column;
+    gap: 20px;
+}
+h1{font-size: 50px; color:rgba(0, 0, 255, 0.432);}
+form{
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+form input{width: 84%; padding: 20px; font-size: 20px; border: none; border-radius: 20px; color: rgba(0, 0, 255, 0.6);}
+form button{height: 100%; padding: 18px; border: none; border-radius: 20px; font-size: 24px; color: rgba(0, 0, 255, 0.6);}
+@media (min-width:990px) {
+    form button{padding: 10px ;width: 20%; }
+    form input{width: 80%;}
+}
+@media (max-width:1486px) {
+    form button{font-size: 20px;}
+}
+.notes{ width: 40%; }
+.notes ul{ width: 100%; display: block; }
+.notes ul li{margin-bottom: 10px; border-radius: 20px; display: flex; background:#eee;  display: flex; align-items: center; justify-content: space-between; }
+@media(max-width:1300px)
+{
+    form{ width: 60%;}
+    .notes{width: 60%;}
+}
+@media(max-width:1250px)
+{
+    form{ width: 70%;}
+    .notes{width: 70%;}
+}
+@media(max-width:1100px)
+{
+    form{ width: 80%;}
+    .notes{width: 80%;}
+    form input{width: 75%;}
+    form button{width:25%}
+}
+@media(max-width:595px)
+{
+    form{ width: 90%;}
+    .notes{width: 90%;}
+    form input{width: 75%;}
+    form button{width:25%}
+}
+@media(max-width:595px)
+{
+    form{ width: 90%; flex-direction: column; gap: 10px;}
+    .notes{width: 90%;}
+    form input{width: 100%;}
+    form button{width:100%}
+}
+@media(max-width:460px)
+{
+    .notes ul li{flex-direction: column;}
+}
+
+.notes ul li p{padding: 20px; font-size: 24px; }
+.notes ul li .buttons button{padding: 22px; color: rgba(0, 0, 255, 0.6); font-size: 20px; border: none; background-color: transparent;}
+.notes ul li .buttons button:last-child{border-radius: 20px;}
+.notes ul li.toggle p{
+    position: relative;
+}
+.notes ul li.toggle p::before{
+   content: "";
+   width: 85%;
+   background-color: black;
+   height: 1px;
+   position: absolute;
+   top: 55%;
+}
